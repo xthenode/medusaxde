@@ -1,0 +1,237 @@
+########################################################################
+# Copyright (c) 1988-2021 $organization$
+#
+# This software is provided by the author and contributors ``as is''
+# and any express or implied warranties, including, but not limited to,
+# the implied warranties of merchantability and fitness for a particular
+# purpose are disclaimed. In no event shall the author or contributors
+# be liable for any direct, indirect, incidental, special, exemplary,
+# or consequential damages (including, but not limited to, procurement
+# of substitute goods or services; loss of use, data, or profits; or
+# business interruption) however caused and on any theory of liability,
+# whether in contract, strict liability, or tort (including negligence
+# or otherwise) arising in any way out of the use of this software,
+# even if advised of the possibility of such damage.
+#
+#   File: medusaxde.pri
+#
+# Author: $author$
+#   Date: 10/30/2021
+#
+# QtCreator .pri file for medusaxde
+########################################################################
+# depends cgicc;libxml2;libxslt
+
+OTHER_PKG = ../../../../../..
+OTHER_PRJ = ../../../../..
+OTHER_BLD = ..
+
+THIRDPARTY_NAME = thirdparty
+THIRDPARTY_PKG = $${OTHER_PKG}/$${THIRDPARTY_NAME}
+THIRDPARTY_PRJ = $${OTHER_PRJ}/$${THIRDPARTY_NAME}
+THIRDPARTY_SRC = $${OTHER_PRJ}/source/$${THIRDPARTY_NAME}
+
+########################################################################
+# cgicc
+CGICC_VERSION_MAJOR = 3
+CGICC_VERSION_MINOR = 2
+CGICC_VERSION_RELEASE = 16
+CGICC_VERSION = $${CGICC_VERSION_MAJOR}.$${CGICC_VERSION_MINOR}.$${CGICC_VERSION_RELEASE}
+CGICC_NAME = cgicc
+CGICC_GROUP = $${CGICC_NAME}
+CGICC_SOURCE = source
+CGICC_DIR = $${CGICC_GROUP}/$${CGICC_NAME}-$${CGICC_VERSION}
+CGICC_PKG_DIR = $${CGICC_NAME}
+CGICC_HOME_BUILD = $${HOME}/build/$${CGICC_NAME}
+CGICC_HOME_BUILD_INCLUDE = $${CGICC_HOME_BUILD}/include
+CGICC_HOME_BUILD_LIB = $${CGICC_HOME_BUILD}/lib
+CGICC_THIRDPARTY_PKG = $${THIRDPARTY_PKG}/$${CGICC_DIR}
+CGICC_THIRDPARTY_PRJ = $${THIRDPARTY_PRJ}/$${CGICC_DIR}
+CGICC_THIRDPARTY_PKG_BUILD = $${THIRDPARTY_PKG}/build/$${CGICC_NAME}
+CGICC_THIRDPARTY_PRJ_BUILD = $${THIRDPARTY_PRJ}/build/$${CGICC_NAME}
+CGICC_THIRDPARTY_SRC = $${THIRDPARTY_SRC}/$${CGICC_PKG_DIR}
+CGICC_THIRDPARTY_SRC_GROUP = $${CGICC_NAME}
+CGICC_THIRDPARTY_SRC_NAME = $${CGICC_NAME}
+CGICC_THIRDPARTY_SRC_DIR = $${THIRDPARTY_SRC}/$${CGICC_THIRDPARTY_SRC_GROUP}/$${CGICC_THIRDPARTY_SRC_NAME} 
+CGICC_PKG = $${OTHER_PKG}/$${CGICC_PKG_DIR}
+CGICC_PRJ = $${OTHER_PRJ}/$${CGICC_PKG_DIR}
+#CGICC_SRC = $${CGICC_THIRDPARTY_SRC_DIR}
+#CGICC_SRC = $${CGICC_THIRDPARTY_PKG}/$${CGICC_SOURCE}
+#CGICC_SRC = $${CGICC_THIRDPARTY_PRJ}/$${CGICC_SOURCE}
+#CGICC_SRC = $${CGICC_PKG}/$${CGICC_SOURCE}
+#CGICC_SRC = $${CGICC_PRJ}/$${CGICC_SOURCE}
+
+# cgicc INCLUDEPATH
+#
+cgicc_INCLUDEPATH += \
+$${CGICC_THIRDPARTY_PRJ_BUILD}/include/cgicc \
+$${CGICC_THIRDPARTY_PRJ_BUILD}/include \
+
+# cgicc DEFINES
+#
+cgicc_DEFINES += \
+
+########################################################################
+# libxml2
+LIBXML2_VERSION_MAJOR = 2
+LIBXML2_VERSION_MINOR = 7
+LIBXML2_VERSION_RELEASE = 8
+LIBXML2_VERSION = $${LIBXML2_VERSION_MAJOR}.$${LIBXML2_VERSION_MINOR}.$${LIBXML2_VERSION_RELEASE}
+XML2_NAME = xml2
+LIBXML2_NAME = libxml2
+LIBXML2_GROUP = $${LIBXML2_NAME}
+LIBXML2_SOURCE = source
+LIBXML2_DIR = $${LIBXML2_GROUP}/$${LIBXML2_NAME}-$${LIBXML2_VERSION}
+LIBXML2_PKG_DIR = $${LIBXML2_NAME}
+LIBXML2_HOME_BUILD = $${HOME}/build/$${LIBXML2_NAME}
+LIBXML2_HOME_BUILD_INCLUDE = $${LIBXML2_HOME_BUILD}/include
+LIBXML2_HOME_BUILD_LIB = $${LIBXML2_HOME_BUILD}/lib
+LIBXML2_THIRDPARTY_PKG = $${THIRDPARTY_PKG}/$${LIBXML2_DIR}
+LIBXML2_THIRDPARTY_PRJ = $${THIRDPARTY_PRJ}/$${LIBXML2_DIR}
+LIBXML2_THIRDPARTY_PKG_BUILD = $${THIRDPARTY_PKG}/build/$${LIBXML2_NAME}
+LIBXML2_THIRDPARTY_PRJ_BUILD = $${THIRDPARTY_PRJ}/build/$${LIBXML2_NAME}
+LIBXML2_THIRDPARTY_SRC = $${THIRDPARTY_SRC}/$${LIBXML2_PKG_DIR}
+LIBXML2_THIRDPARTY_SRC_GROUP = $${LIBXML2_NAME}
+LIBXML2_THIRDPARTY_SRC_NAME = $${LIBXML2_NAME}
+LIBXML2_THIRDPARTY_SRC_DIR = $${THIRDPARTY_SRC}/$${LIBXML2_THIRDPARTY_SRC_GROUP}/$${LIBXML2_THIRDPARTY_SRC_NAME} 
+LIBXML2_PKG = $${OTHER_PKG}/$${LIBXML2_PKG_DIR}
+LIBXML2_PRJ = $${OTHER_PRJ}/$${LIBXML2_PKG_DIR}
+#LIBXML2_SRC = $${LIBXML2_THIRDPARTY_SRC_DIR}
+#LIBXML2_SRC = $${LIBXML2_THIRDPARTY_PKG}/$${LIBXML2_SOURCE}
+#LIBXML2_SRC = $${LIBXML2_THIRDPARTY_PRJ}/$${LIBXML2_SOURCE}
+#LIBXML2_SRC = $${LIBXML2_PKG}/$${LIBXML2_SOURCE}
+#LIBXML2_SRC = $${LIBXML2_PRJ}/$${LIBXML2_SOURCE}
+
+# libxml2 INCLUDEPATH
+#
+libxml2_INCLUDEPATH += \
+$${LIBXML2_THIRDPARTY_PRJ_BUILD}/include/libxml2 \
+$${LIBXML2_THIRDPARTY_PRJ_BUILD}/include \
+
+# libxml2 DEFINES
+#
+libxml2_DEFINES += \
+
+########################################################################
+# libxslt
+LIBXSLT_VERSION_MAJOR = 1
+LIBXSLT_VERSION_MINOR = 1
+LIBXSLT_VERSION_RELEASE = 26
+LIBXSLT_VERSION = $${LIBXSLT_VERSION_MAJOR}.$${LIBXSLT_VERSION_MINOR}.$${LIBXSLT_VERSION_RELEASE}
+XSLT_NAME = xslt
+LIBXSLT_NAME = libxslt
+LIBXSLT_GROUP = $${LIBXSLT_NAME}
+LIBXSLT_SOURCE = source
+LIBXSLT_DIR = $${LIBXSLT_GROUP}/$${LIBXSLT_NAME}-$${LIBXSLT_VERSION}
+LIBXSLT_PKG_DIR = $${LIBXSLT_NAME}
+LIBXSLT_HOME_BUILD = $${HOME}/build/$${LIBXSLT_NAME}
+LIBXSLT_HOME_BUILD_INCLUDE = $${LIBXSLT_HOME_BUILD}/include
+LIBXSLT_HOME_BUILD_LIB = $${LIBXSLT_HOME_BUILD}/lib
+LIBXSLT_THIRDPARTY_PKG = $${THIRDPARTY_PKG}/$${LIBXSLT_DIR}
+LIBXSLT_THIRDPARTY_PRJ = $${THIRDPARTY_PRJ}/$${LIBXSLT_DIR}
+LIBXSLT_THIRDPARTY_PKG_BUILD = $${THIRDPARTY_PKG}/build/$${LIBXSLT_NAME}
+LIBXSLT_THIRDPARTY_PRJ_BUILD = $${THIRDPARTY_PRJ}/build/$${LIBXSLT_NAME}
+LIBXSLT_THIRDPARTY_SRC = $${THIRDPARTY_SRC}/$${LIBXSLT_PKG_DIR}
+LIBXSLT_THIRDPARTY_SRC_GROUP = $${LIBXSLT_NAME}
+LIBXSLT_THIRDPARTY_SRC_NAME = $${LIBXSLT_NAME}
+LIBXSLT_THIRDPARTY_SRC_DIR = $${THIRDPARTY_SRC}/$${LIBXSLT_THIRDPARTY_SRC_GROUP}/$${LIBXSLT_THIRDPARTY_SRC_NAME} 
+LIBXSLT_PKG = $${OTHER_PKG}/$${LIBXSLT_PKG_DIR}
+LIBXSLT_PRJ = $${OTHER_PRJ}/$${LIBXSLT_PKG_DIR}
+#LIBXSLT_SRC = $${LIBXSLT_THIRDPARTY_SRC_DIR}
+#LIBXSLT_SRC = $${LIBXSLT_THIRDPARTY_PKG}/$${LIBXSLT_SOURCE}
+#LIBXSLT_SRC = $${LIBXSLT_THIRDPARTY_PRJ}/$${LIBXSLT_SOURCE}
+#LIBXSLT_SRC = $${LIBXSLT_PKG}/$${LIBXSLT_SOURCE}
+#LIBXSLT_SRC = $${LIBXSLT_PRJ}/$${LIBXSLT_SOURCE}
+
+# libxslt INCLUDEPATH
+#
+libxslt_INCLUDEPATH += \
+$${LIBXSLT_THIRDPARTY_PRJ_BUILD}/include/libxslt \
+$${LIBXSLT_THIRDPARTY_PRJ_BUILD}/include \
+$${libxml2_INCLUDEPATH} \
+
+# libxslt DEFINES
+#
+libxslt_DEFINES += \
+
+########################################################################
+# medusaxde
+MEDUSAXDE_NAME = medusaxde
+MEDUSAXDE_SOURCE = source
+
+MEDUSAXDE_PKG = ../../../../..
+MEDUSAXDE_BLD = ../..
+
+MEDUSAXDE_PRJ = $${MEDUSAXDE_PKG}
+MEDUSAXDE_BIN = $${MEDUSAXDE_BLD}/bin
+MEDUSAXDE_LIB = $${MEDUSAXDE_BLD}/lib
+MEDUSAXDE_SRC = $${MEDUSAXDE_PKG}/$${MEDUSAXDE_SOURCE}
+
+# medusaxde BUILD_CONFIG
+#
+CONFIG(debug, debug|release) {
+BUILD_CONFIG = Debug
+medusaxde_DEFINES += DEBUG_BUILD
+} else {
+BUILD_CONFIG = Release
+medusaxde_DEFINES += RELEASE_BUILD
+}
+
+# medusaxde INCLUDEPATH
+#
+medusaxde_INCLUDEPATH += \
+$${MEDUSAXDE_SRC}/clib/cxml/cxslt \
+$${MEDUSAXDE_SRC}/clib/cxml \
+$${MEDUSAXDE_SRC}/clib/cxttp/chttp/ccgi \
+$${MEDUSAXDE_SRC}/clib/cxttp/chttp \
+$${MEDUSAXDE_SRC}/clib/cxttp \
+$${MEDUSAXDE_SRC}/clib/cos/cthread/cpthread \
+$${MEDUSAXDE_SRC}/clib/cos/cthread \
+$${MEDUSAXDE_SRC}/clib/cos/cfs \
+$${MEDUSAXDE_SRC}/clib/cos/cfs/cunixfs \
+$${MEDUSAXDE_SRC}/clib/cos \
+$${MEDUSAXDE_SRC}/clib/cbase \
+$${MEDUSAXDE_SRC}/clib/cplatform \
+$${MEDUSAXDE_SRC} \
+$${libxslt_INCLUDEPATH} \
+$${libxml2_INCLUDEPATH} \
+$${cgicc_INCLUDEPATH} \
+$${build_medusaxde_INCLUDEPATH} \
+
+# medusaxde DEFINES
+#
+medusaxde_DEFINES += \
+$${cgicc_DEFINES} \
+$${libxml2_DEFINES} \
+$${libxslt_DEFINES} \
+$${build_medusaxde_DEFINES} \
+
+MEDUSAXDE_CBASE_LIBARY_NAME = cbase
+MEDUSAXDE_COS_LIBARY_NAME = cos
+MEDUSAXDE_CXTTP_LIBARY_NAME = cxttp
+MEDUSAXDE_CCGICC_LIBARY_NAME = ccgicc
+MEDUSAXDE_CXML_LIBARY_NAME = cxml
+MEDUSAXDE_CXSLT_LIBARY_NAME = cxslt
+MEDUSAXDE_CLIBXSLT_LIBARY_NAME = clibxslt
+
+# medusaxde LIBS
+#
+medusaxde_LIBS += \
+-L$${MEDUSAXDE_LIB}/lib$${MEDUSAXDE_CLIBXSLT_LIBARY_NAME} \
+-l$${MEDUSAXDE_CLIBXSLT_LIBARY_NAME} \
+-L$${MEDUSAXDE_LIB}/lib$${MEDUSAXDE_CXSLT_LIBARY_NAME} \
+-l$${MEDUSAXDE_CXSLT_LIBARY_NAME} \
+-L$${MEDUSAXDE_LIB}/lib$${MEDUSAXDE_CXML_LIBARY_NAME} \
+-l$${MEDUSAXDE_CXML_LIBARY_NAME} \
+-L$${MEDUSAXDE_LIB}/lib$${MEDUSAXDE_CCGICC_LIBARY_NAME} \
+-l$${MEDUSAXDE_CCGICC_LIBARY_NAME} \
+-L$${MEDUSAXDE_LIB}/lib$${MEDUSAXDE_CXTTP_LIBARY_NAME} \
+-l$${MEDUSAXDE_CXTTP_LIBARY_NAME} \
+-L$${MEDUSAXDE_LIB}/lib$${MEDUSAXDE_CBASE_LIBARY_NAME} \
+-l$${MEDUSAXDE_CBASE_LIBARY_NAME} \
+-L$${MEDUSAXDE_LIB}/lib$${MEDUSAXDE_COS_LIBARY_NAME} \
+-l$${MEDUSAXDE_COS_LIBARY_NAME} \
+
+# medusaxde ccgicc LIBS
+#
+medusaxde_ccgicc_LIBS += \
